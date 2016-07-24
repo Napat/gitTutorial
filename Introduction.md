@@ -11,7 +11,7 @@ Git คือ Distributed Version Control System (DVCS) การทำงาน
 - Office Git Site : http://git-scm.com/
 
 สถานะของ Git
-- Create file xxx.txt เป็นการสร้าง file ใหม่  `สถานะ untrack`
+- Create file Readme.txt เป็นการสร้าง file ใหม่  `สถานะ untrack`
 - Add file เข้าสู่ staging area เป็นการเตรียมพร้อมที่จะทำการ snapshot  `สถานะ staging`
 - ทำการ Commit file เป็นการ snapshot file ล่าสุด ข้อมูลถูกบันทึกเรียบร้อยแล้ว  `สถานะ commit`
 
@@ -21,10 +21,8 @@ Git คือ Distributed Version Control System (DVCS) การทำงาน
 
 การสร้าง git repository ไปที่ <workdir>/.git/
 
-````
-cd <work_dir>
-git init 
-````
+`cd <work_dir>`
+`git init`
 
 การเพิ่ม files เข้า repository (indexing files)
 
@@ -39,6 +37,7 @@ git init
 `git add docs/`  add file ใน docs directory ทั้งหมด
 
 การตรวจสอบสถานะ repository
+
 `git status`
 
 การ commit repository
@@ -54,6 +53,7 @@ git init
 
 การตรวจสอบความแตกต่างระหว่าง version
 ใน local repository ว่ามีการแก้ไขอะไรไป
+
 `git diff` 
 
 
