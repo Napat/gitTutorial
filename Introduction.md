@@ -47,7 +47,7 @@ Git คือ Distributed Version Control System (DVCS) การทำงาน
 
 `git commit -a` commit แบบไปแก้ใน command line
 
-`git commit -a -m "ข้อความอธิบายการเปลี่ยนแปลง"` commit message ว่าทำอะไรไป 
+`git commit -a -m "ข้อความอธิบายการเปลี่ยนแปลง"` commit message ว่าทำอะไรไป โดยเป็นการ skip staging กับ commit
 
 
 ## **Staging&Remotes**
@@ -69,4 +69,52 @@ Git คือ Distributed Version Control System (DVCS) การทำงาน
 ในกรณีที่เราต้องการ discard การเปลี่ยนแปลงจาก file ล่าสุดที่มีการ commit
 
 `git checkout --filename`
+
+การ undo commit
+
+`git reset --soft HEAD^` โดย soft เป็นการ reset ไปที่ staging และ HEAD เป็นการย้อนกลับไป commit ก่อน HEAD
+
+การ add ไปยัง commit
+
+`git add todo.txt`
+
+`git commit --amend -m "New commit message & todo.txt"` โดย amend หมายถึงการ add last commit
+
+Useful command
+`git reset --soft HEAD^`  การ undo last commit ไปที่ staging
+
+`git commit --amend -m "New Meassage"` การ change last commit
+
+`git reset --hard HEAD^` การ undo last commit และทั้งหมดที่เปลี่ยนแปลง
+
+`git reset --hard HEAD^^` การ undo 2 last commit และทั้งหมดที่เปลี่ยนแปลง
+
+การ share ข้อมูล
+
+Hosted : GitHub, BitBucket
+
+การ add remote
+
+`git remote add origin http://github.com/Gregg/git-real.git` 
+
+`git remote -v` จะเป็นการ show remote repositories
+
+ส่งการเปลี่ยนแปลงจาก local ไปยัง remote repository (โดยสามารถเปลี่ยนชื่อ master เป็นชื่อ branch ที่ต้องการได้)
+
+`git push origin master` โดยที่ origin คือ remote repository name , master คือ local branch to push
+
+ดึงการเปลี่ยนแปลงล่าสุดมายัง local repository
+
+`git pull`
+
+การทำงานกับ remote
+
+`git remote add <name> <address>` การ add new remote
+
+`git remote rm <name>` การ remove remote
+
+`git push -u <name> <branch>` การ push to remote
+
+## **Cloning&Branching**
+
 
