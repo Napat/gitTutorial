@@ -1,0 +1,41 @@
+Git คือ Distributed Version Control System (DVCS) การทำงานแบบไม่ต้องมีศูนย์กลาง 
+
+ข้อดี commit ได้เร็ว,สามารถทำงานแบบ offline ได้
+
+การทำงานกับ Git 
+- Support command line interface
+- มี GUI tools ให้เลือกใช้หลายอัน
+- Office Git Site : http://git-scm.com/
+
+Git มี 3 สถานะ
+- Create file xxx.txt --> สถานะ untrack
+- Add file เข้าสู่ staging area เป็นการเตรียมพร้อมที่จะทำการ snapshot --> สถานะ staging
+- ทำการ Commit file เป็นการ snapshot file ล่าสุด --> สถานะ commit
+
+สร้าง git repository ไปที่ <workdir>/.git/
+
+````
+cd <work_dir>
+git init 
+````
+
+เพิ่ม files เข้า repository (indexing files)
+````
+git add <filename01> <filename02> ...
+git add --all --> add file ทั้งหมดที่่เป็น new หรือ file ที่ถูก Modify ทั้งหมด
+git add *.txt --> add file ที่เป็น file.txt ทั้งหมดที่อยู่ใน current directory
+git add docs/*.txt --> add file ใน docs directory ที่เป็น file.txt
+git add docs/ --> add file ใน docs directory ทั้งหมด
+```
+
+ตรวจสอบสถานะ repository
+````
+git status
+````
+
+commit repository
+````
+git commit
+git commit -a --> commit แบบไปแก้ใน command line
+git commit -a -m "Modify" --> commit message ว่าทำอะไรไป 
+````
