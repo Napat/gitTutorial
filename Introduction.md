@@ -56,10 +56,6 @@ Git คือ Distributed Version Control System (DVCS) การทำงาน
 
 `git diff` 
 
-แต่ถ้าเราไม่ได้มีการแก้ไขอะไรแค่มีการเปลี่ยน stage เราสามารถใช้คำสั่งเพื่อดูความแตกต่างของ stage ได้
-
-`git diff --staged`
-
 การย้อน working directory ของเราไป ณ commit หนี่งใดใน history ของ local repository
 
 `git reset <id>` ในกรณีที่เราต้องการย้อนไปที่ id ใด id หนึ่ง
@@ -117,4 +113,7 @@ Hosted : GitHub, BitBucket
 
 ## **Cloning&Branching**
 
+การ clone repository
+
+`git clone https:`
 
