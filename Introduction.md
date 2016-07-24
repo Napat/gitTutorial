@@ -22,6 +22,7 @@ Git คือ Distributed Version Control System (DVCS) การทำงาน
 การสร้าง git repository ไปที่ <workdir>/.git/
 
 `cd <work_dir>`
+
 `git init`
 
 การเพิ่ม files เข้า repository (indexing files)
@@ -46,14 +47,26 @@ Git คือ Distributed Version Control System (DVCS) การทำงาน
 
 `git commit -a` commit แบบไปแก้ใน command line
 
-`git commit -a -m "Modify"` commit message ว่าทำอะไรไป 
+`git commit -a -m "ข้อความอธิบายการเปลี่ยนแปลง"` commit message ว่าทำอะไรไป 
 
 
 ## **Staging&Remotes**
 
-การตรวจสอบความแตกต่างระหว่าง version
-ใน local repository ว่ามีการแก้ไขอะไรไป
+การตรวจสอบความแตกต่างระหว่าง versionใน local repository ว่ามีการแก้ไขอะไรไป
 
 `git diff` 
 
+แต่ถ้าเราไม่ได้มีการแก้ไขอะไรแค่มีการเปลี่ยน stage เราสามารถใช้คำสั่งเพื่อดูความแตกต่างของ stage ได้
+
+`git diff --staged`
+
+การย้อน working directory ของเราไป ณ commit หนี่งใดใน history ของ local repository
+
+`git reset <id>` ในกรณีที่เราต้องการย้อนไปที่ id ใด id หนึ่ง
+
+`git reset HEAD filename` ในกรณีที่เราต้องการย้อนกลับไปที่ commit ล่าสุด HEAD เป็นการอ้างอิงถึง commit ล่าสุด
+
+ในกรณีที่เราต้องการ discard การเปลี่ยนแปลงจาก file ล่าสุดที่มีการ commit
+
+`git checkout --filename`
 
