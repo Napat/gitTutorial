@@ -126,7 +126,7 @@ working on a branch
 
   สมมุติเราสร้าง file cat.txt ขึ้นมาที่ branch cat และทำการ commit ที่ branch cat เมื่อเราลอง ls ดูจะมี file README.txt cat.txt
 จากนั้นเราจะย้ายกลับไปที่ master branch โดยใช้คำสั่ง `git checkout master`และจากนั้นลอง ls ดูจะพบว่ามีแต่ file README.txt
-และลอง `git log` ดูก็จะเห็นแต่ log ของ README.txt ไม่มี log ของ cat.txt คือเป็นการทำงานที่ branch ไหนจะอยู่ที่ branch
+และลอง `git log` ดูก็จะเห็นแต่ log ของ README.txt ไม่มี log ของ cat.txt คือเป็นการทำงานที่ branch ไหนจะอยู่ที่ branch นั้น
 
 แต่เราสามารถ merge รวมกันได้โดย
 
