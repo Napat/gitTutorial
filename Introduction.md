@@ -115,5 +115,18 @@ Hosted : GitHub, BitBucket
 
 การ clone repository
 
-`git clone https:`
+`git clone URL` URL ของ remote repository
+`git clone URL localfoldername`
+
+switching to a branch
+`git checkout ชื่อbranch`ชื่อ branch ที่เราต้องการ switch ไป HEAD จะเปลี่ยน เช่นจาก master ไปเป็นชื่อbranch ใหม่
+
+working on a branch
+สมมุติเราสร้าง file cat.txt ขึ้นมาที่ branch cat และทำการ commit ที่ cat branch เมื่อเราลอง ls ดูจะมี file README.txt cat.txt
+จากนั้นเราจะย้ายกลับไปที่ master branch โดยใช้คำสั่ง `git checkout master`และจากนั้นลอง ls ดูจะพบว่ามีแต่ file README.txt
+และลอง `git log` ดูก็จะเห็นแต่ log ของ README.txt ไม่มี log ของ cat.txt 
+time to merge
+`git checkout master` ลอง ls ดูจะมี file README.txt
+จากนั้น
+`git merge cat`
 
