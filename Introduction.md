@@ -119,14 +119,27 @@ Hosted : GitHub, BitBucket
 `git clone URL localfoldername`
 
 switching to a branch
+
 `git checkout ชื่อbranch`ชื่อ branch ที่เราต้องการ switch ไป HEAD จะเปลี่ยน เช่นจาก master ไปเป็นชื่อbranch ใหม่
 
 working on a branch
-สมมุติเราสร้าง file cat.txt ขึ้นมาที่ branch cat และทำการ commit ที่ cat branch เมื่อเราลอง ls ดูจะมี file README.txt cat.txt
+
+  สมมุติเราสร้าง file cat.txt ขึ้นมาที่ branch cat และทำการ commit ที่ branch cat เมื่อเราลอง ls ดูจะมี file README.txt cat.txt
 จากนั้นเราจะย้ายกลับไปที่ master branch โดยใช้คำสั่ง `git checkout master`และจากนั้นลอง ls ดูจะพบว่ามีแต่ file README.txt
-และลอง `git log` ดูก็จะเห็นแต่ log ของ README.txt ไม่มี log ของ cat.txt 
+และลอง `git log` ดูก็จะเห็นแต่ log ของ README.txt ไม่มี log ของ cat.txt คือเป็นการทำงานที่ branch ไหนจะอยู่ที่ branch
+
+แต่เราสามารถ merge รวมกันได้โดย
+
 time to merge
-`git checkout master` ลอง ls ดูจะมี file README.txt
-จากนั้น
-`git merge cat`
+โดยตอนนี้เราต้องการจะเอา file cat.txt มาที่ branch master ด้วย
+ทำได้โดย`git checkout master` ลอง ls ดูจะมี file README.txt อย่างเดียว
+จากนั้นใช้คำสั่ง `git merge cat`การทำตรงนี้เรียกว่า `fast forward`เป็นการเชื่อมจาก branch cat ไปยัง branch master
+หลังจากนั้นเราสามารถลบ branch cat โดยใช้คำสั่ง `git branch -d cat` โดย d มาจาก delete ทีนี้ก็จะเหลือแต่ branch master
+
+non fast forward 
+
+`git checkout -b admin` คือการ create new branch (branch admin)และ switch ไป branch admin
+จากนั้นทำการ add และ commit add และ commit จะเหมือนเป็นการสร้างจุดที่ branch admin 2 จุด
+และจากนั้นกลับไปที่ branch master `git checkout master` และใช้คำสั่ง `git branch` จะพบว่ามี 
+branch admin และ *master อยู่  โดยจะอยู่คนละเส้นกัน
 
