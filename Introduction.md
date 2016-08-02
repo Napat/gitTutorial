@@ -143,5 +143,21 @@ non fast forward
 และจากนั้นกลับไปที่ branch master `git checkout master` และใช้คำสั่ง `git branch` จะพบว่ามี 
 branch admin และ *master อยู่  โดยจะอยู่คนละเส้นกัน
 
-## **CollaborationBasics**
+## **Branching**
+
+Pulling new branch 
+`git branch`
+`git branch -r` เป็นการ list all remote branch
+
+Remote show
+`git remote show origin` 
+
+Removing a branch
+`git push origin` เป็นการ delete remote branch
+`git branch -d fileที่ต้องการลบ`เป็นการ delete local branch แบบ manual
+
+Tagging
+Tag เป็นตัวใช้ reference ในการ commit 
+`git tag` list all tage
+
 
