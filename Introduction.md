@@ -159,7 +159,10 @@ Removing a branch
 
 Tagging
 Tag เป็นตัวใช้ reference ในการ commit 
-`git tag` list all tage
+`git tag` list all tage 
 
+## **RebaseBelongToUs**
 
+Rebase 
+`git rebase` 
 
