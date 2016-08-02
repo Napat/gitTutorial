@@ -145,9 +145,9 @@ branch admin และ *master อยู่  โดยจะอยู่คน�
 
 ## **Branching**
 
-Pulling new branch 
-`git branch`
-`git branch -r` เป็นการ list all remote branch
+Pulling new branches
+`git branch` แสดงว่าตอนนี้มี branch อะไรบ้าง และเราอยู่ที่ branch ไหน
+`git branch -r` เป็นการ list all remote branches
 
 Remote show
 `git remote show origin` 
@@ -155,9 +155,11 @@ Remote show
 Removing a branch
 `git push origin` เป็นการ delete remote branch
 `git branch -d fileที่ต้องการลบ`เป็นการ delete local branch แบบ manual
+`git branch -D fileที่ต้องการ ลบ` หากเรามั่นใจสามารถลบโดยใช้ D ตัวใหญ่ได้เลย
 
 Tagging
 Tag เป็นตัวใช้ reference ในการ commit 
 `git tag` list all tage
+
 
 
