@@ -21,9 +21,10 @@ Git คือ Distributed Version Control System (DVCS) การทำงาน
 
 การสร้าง git repository ไปที่ <workdir>/.git/
 
-`cd <work_dir>`
-
-`git init`
+```
+cd <work_dir>
+git init
+```
 
 การเพิ่ม files เข้า repository (indexing files)
 
@@ -40,16 +41,24 @@ Git คือ Distributed Version Control System (DVCS) การทำงาน
 การตรวจสอบสถานะ repository
 
 `git status`
+  
+ตั้งการตั้งค่า username และ email ให้ git repository  
+```
+git config user.name "Rattanap Arpaxxxx"
+git config user.email "rattana@email.com"
+```
+  
+การ commit repository  
 
-การ commit repository
+แอดไฟล์ที่ต้องการ commit ให้เรียบร้อยด้วย `git add <file to commit>`
 
-`git commit`
+`git commit` จะเด้ง default editor ขึ้นมาให้ใส่ comment  
 
-`git commit -a` commit แบบไปแก้ใน command line
-
-`git commit -a -m "ข้อความอธิบายการเปลี่ยนแปลง"` commit message ว่าทำอะไรไป โดยเป็นการ skip staging กับ commit
-
-
+หรือ  
+  
+`git commit -m "comment message ข้อความอธิบายการเปลี่ยนแปลงของ commit นี้"`  
+  
+  
 ## **Staging&Remotes**
 
 การตรวจสอบความแตกต่างระหว่าง versionใน local repository ว่ามีการแก้ไขอะไรไป
